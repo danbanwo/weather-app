@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import path from 'path'
-
 
 const DayForecast = ({ forecast, unit }) => {
     let sevenDayForecast = () => (
@@ -8,7 +6,7 @@ const DayForecast = ({ forecast, unit }) => {
             return (
                 <div key={idx} style={{border: "1px black solid" }}>
                   <h3 key={idx}>Date: {dateTimeISO}</h3>
-                  <img src={require("../icons/" + icon)}/>
+                  <img src={'src/icons/'+icon}/>
                   <h2 key={idx+5}> High: {maxTempC}<sup key={idx +5}>o</sup>C  </h2>
                   <h2 key={idx +2}> Low: {minTempC}<sup key={idx +2}>o</sup>C </h2>
                 </div>
