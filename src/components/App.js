@@ -9,7 +9,7 @@ export default class App extends Component {
 
         this.state = {
             forecast: null,
-            unit: "Celsius"
+            unit: "Celsius",
         };
 
         this.handleClick = this.handleClick.bind(this);
@@ -32,8 +32,8 @@ export default class App extends Component {
     render() {
         let { forecast, unit } = this.state;
         return forecast ? (
-          <div style={{maxWidth: "90vw", }}>
-            <h1>Daniel's Weather App</h1>
+          <div style={{width: "100vw", }}>
+            <center><h1>Daniel's Weather App</h1></center>
             <Conversion unit={unit} handleClick={this.handleClick} />
             <DayForecast forecast={forecast} unit={unit} />
           </div>
