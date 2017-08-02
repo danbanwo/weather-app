@@ -31,7 +31,6 @@ export default class App extends Component {
 
     render() {
         let { forecast, unit } = this.state;
-        console.log(forecast)
         return forecast ? (
           <div style={{maxWidth: "90vw", }}>
             <h1>Daniel's Weather App</h1>
