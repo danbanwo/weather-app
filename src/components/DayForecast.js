@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 const DayForecast = ({ forecast, unit }) => {
     let sevenDayForecast = () => (
-        unit === "Celsius" ? forecast.map(({ maxTempC, icon, dateTimeISO, minTempC }, idx) => {
+        (unit === "Celsius") ? forecast.map(({ maxTempC, icon, dateTimeISO, minTempC }, idx) => {
             return (
                 <div key={idx} style={{border: "1px black solid", padding: '20px' }}>
                   <h3 key={idx}>Date: {dateTimeISO.substring(0, 10)}</h3>
